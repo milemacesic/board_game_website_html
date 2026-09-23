@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Društvene Igre - O Nama</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/jquery-3.6.4.min.js"></script>
+    <script src="javascript/translation.js"></script>
+    <script src="javascript/script.js"></script>
+</head>
+<body id="background">
+    
+    <header class="site-headers" id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-md-6">
+                    <button id="title" onclick="index()"><h2 id="web-name"><span data-translate="website">DRUŠTVENE IGRE</span><img class="header-images" src="images/2-Dice-Icon.svg"></h2></button>
+                </div>
+                <div id="right-col" class="col-6 col-md-6">
+                    <a href="account.html"><img class="header-images" src="images/shopping-cart-white-icon.webp"></a>
+                    <button class="language" translate="no" onclick="changeLanguage('srb')">SRB</button>
+                    <button class="language" translate="no" onclick="changeLanguage('eng')">ENG</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul id="navigation">
+            <li class="section"><button id="nav1" class="select-page" onclick="index()"><h6 data-translate="home">Početna</h6></button></li>
+            <li class="section dropdown">
+                <button id="nav2" class="select-page dropbtn"><h6 data-translate="gallery">Galerija</h6></button>
+                <div class="dropdown-content">
+                    <a href="gallery.html?section=store" data-translate="store">Prodavnica</a>
+                    <a href="gallery.html?section=games" data-translate="games">Igre</a>
+                    <a href="gallery.html?section=tournaments" data-translate="tournaments">Turnire</a>
+                </div>
+            </li>
+            <li class="section dropdown">
+                <button id="nav3" class="select-page dropbtn"><h6 data-translate="catalog">Katalog Igara</h6></button>
+                <div class="dropdown-content">
+                    <a href="catalog.html?section=family" data-translate="family">Porodične</a>
+                    <a href="catalog.html?section=strategy" data-translate="strategy">Strateške</a>
+                    <a href="catalog.html?section=party" data-translate="party">Zabavne</a>
+                </div>
+            </li>
+            <li class="section"><button id="nav4" class="select-page" onclick="account()"><h6 data-translate="account">Moj Nalog</h6></button></li>
+            <li class="section"><button id="nav5" class="select-page" onclick="about()"><h6 data-translate="about">O Nama</h6></button></li>
+        </ul>
+    </nav>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" data-translate="home">Početna</a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-translate="about">O Nama</li>
+        </ol>
+    </nav>
+    <hr class="break">
+
+    <br>
+    <br>
+    <main>
+        <div class="container-fluid">
+            <div class="row ms-5 me-5">
+                <h1 data-translate="about">O Nama</h1>
+            </div>
+            <br>
+            <div class="row ms-5 me-5">
+                <div class="col-lg-6 col-sm-12">
+                    <h3 data-translate="storeHistory">Istorijat Prodavnice</h3>
+                    <p data-translate="storeHistoryText">Osnovana 2004. godine. Nudimo ogroman izbor društvenih igara gde naši kupci mogu da biraju za porodice, za strategiju ili za žurku. Takođe redovno organizujemo turnire i druženje za sve ljubitelje društvenih igara.</p>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <h3 data-translate="mission">Naša Misija</h3>
+                    <p data-translate="missionText">Verujemo da dobra igra spaja ljude, i zato kod nas nudimo samo najbolje igre. Naš cilj je da svima pomognemo da nađu najbolji izbor za dobar provod.</p>
+                </div>
+            </div>
+            <br>
+            <div class="row ms-5 me-5">
+                <div class="col-lg-6 col-sm-12">
+                    <h3 data-translate="awards">Nagrade i Priznanja</h3>
+                    <ul id="nagrade-i-priznanja">
+                        <li data-translate="award1">Radnja Godine Društvenih Igara - 2020, 2025</li>
+                        <li data-translate="award2">Nagrada za Najbolju Onlajn Prodavnicu - 2020, 2024, 2025</li>
+                        <li data-translate="award3">Nagrada za Najbolji Turnir Društvenih Igara - 2004, 2016, 2017, 2020, 2022, 2023</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <h3 data-translate="workingHours">Radno Vreme</h3>
+                    <p data-translate="days">Ponedeljak - Subota: 09:00-20:00</p>
+                    <p data-translate="sunday">Nedelja: 12:00-20:00</p>
+                </div>
+            </div>
+            <br>
+            <div class="row ms-5 me-5">
+                <div class="col-lg-6 col-sm-12">
+                    <h3 data-translate="contact">Kontakt</h3>
+                    <p>
+                        Bulevar kralja Aleksandra 73, 11120 Beograd
+                        <br>
+                        +381 11 123 456
+                        <br>
+                        kontakt@drustveneigre.rs
+                    </p>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <h3 data-translate="follow">Pratite Nas</h3>
+                    <p>
+                        Instagram: drustveneigre
+                        <br>
+                        Facebook: drustveneigre
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="row ms-5 me-5">
+                <div class="col-12">
+                    <h3 data-translate="location">Lokacija Prodavnice</h3>
+                    <br>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2329.5077571973175!2d20.473557475524395!3d44.80538187107089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9f5ee145d3%3A0x3ed89b5bb505d83!2sUniversity%20of%20Belgrade%20School%20of%20Electrical%20Engineering!5e1!3m2!1sen!2srs!4v1783961597233!5m2!1sen!2srs" id="map" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <br>
+    </main>
+    <br>
+
+    <footer class="site-headers" id="footer">
+        <h6 data-translate="footer">Copyright 2026, Mile Maćešić, Odsek za Softversko Inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu</h6>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Društvene Igre - Galerija</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/jquery-3.6.4.min.js"></script>
+    <script src="javascript/translation.js"></script>
+    <script src="javascript/script.js"></script>
+</head>
+<body id="background">
+    
+    <header class="site-headers" id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-md-6">
+                    <button id="title" onclick="index()"><h2 id="web-name"><span data-translate="website">DRUŠTVENE IGRE</span><img class="header-images" src="images/2-Dice-Icon.svg"></h2></button>
+                </div>
+                <div id="right-col" class="col-6 col-md-6">
+                    <a href="account.html"><img class="header-images" src="images/shopping-cart-white-icon.webp"></a>
+                    <button class="language" translate="no" onclick="changeLanguage('srb')">SRB</button>
+                    <button class="language" translate="no" onclick="changeLanguage('eng')">ENG</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul id="navigation">
+            <li class="section"><button id="nav1" class="select-page" onclick="index()"><h6 data-translate="home">Početna</h6></button></li>
+            <li class="section dropdown">
+                <button id="nav2" class="select-page dropbtn"><h6 data-translate="gallery">Galerija</h6></button>
+                <div class="dropdown-content">
+                    <a href="gallery.html?section=store" data-translate="store">Prodavnica</a>
+                    <a href="gallery.html?section=games" data-translate="games">Igre</a>
+                    <a href="gallery.html?section=tournaments" data-translate="tournaments">Turnire</a>
+                </div>
+            </li>
+            <li class="section dropdown">
+                <button id="nav3" class="select-page dropbtn"><h6 data-translate="catalog">Katalog Igara</h6></button>
+                <div class="dropdown-content">
+                    <a href="catalog.html?section=family" data-translate="family">Porodične</a>
+                    <a href="catalog.html?section=strategy" data-translate="strategy">Strateške</a>
+                    <a href="catalog.html?section=party" data-translate="party">Zabavne</a>
+                </div>
+            </li>
+            <li class="section"><button id="nav4" class="select-page" onclick="account()"><h6 data-translate="account">Moj Nalog</h6></button></li>
+            <li class="section"><button id="nav5" class="select-page" onclick="about()"><h6 data-translate="about">O Nama</h6></button></li>
+        </ul>
+    </nav>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" data-translate="home">Početna</a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-translate="gallery">Galerija</li>
+        </ol>
+    </nav>
+    <hr class="break">
+
+    <br>
+    <br>
+    <main>
+        <div class="container-fluid">
+            <div class="row ms-5 me-5">
+                <h1 data-translate="gallery">Galerija</h1>
+            </div>
+            <br>
+
+            <div class="ms-5 me-5 selector">
+                <a id="store-select" href="?section=store" onclick="showSection('store'); return false;" data-translate="store">Prodavnica</a>
+                <a id="games-select" href="?section=games" onclick="showSection('games'); return false;" data-translate="games">Igre</a>
+                <a id="tournaments-select" href="?section=tournaments" onclick="showSection('tournaments'); return false;" data-translate="tournaments">Turnire</a>
+            </div>
+            <br>
+
+            <div id="store" class="row ms-5 me-5 g-4 show-section">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/prodavnica1.jpg" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/prodavnica2.jpg" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/prodavnica3.webp" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/prodavnica4.webp" class="images">
+                </div>
+            </div>
+
+            <div id="games" class="row ms-5 me-5 g-4 show-section">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/catan.webp" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/guess_who.webp" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/monopoly.jpg" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/chess.jpg" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/splendor.webp" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/azul.webp" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/wavelength.webp" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/just-one.webp" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/codenames.webp" class="images">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img src="images/telestrations.jpg" class="images">
+                </div>
+            </div>
+
+            <div id="tournaments" class="row ms-5 me-5 g-4 show-section">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <a href="https://www.youtube.com/watch?v=N5nzoMZUz1c" target="_blank">
+                        <img src="images/video.webp" alt="Azul Tournament" class="videos">
+                    </a>
+                    <p data-translate="video1">Azul Turnir</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <a href="https://www.youtube.com/watch?v=nB28h-yh3T4" target="_blank">
+                        <img src="images/video.webp" alt="Catan Tutorial" class="videos">
+                    </a>
+                    <p data-translate="video2">Catan Uputstvo</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </main>
+    <br>
+
+    <footer class="site-headers" id="footer">
+        <h6 data-translate="footer">Copyright 2026, Mile Maćešić, Odsek za Softversko Inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu</h6>
+    </footer>
+
+</body>
+</html>

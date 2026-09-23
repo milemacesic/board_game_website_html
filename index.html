@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Društvene Igre - Početna</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/jquery-3.6.4.min.js"></script>
+    <script src="javascript/translation.js"></script>
+    <script src="javascript/games.js"></script>
+    <script src="javascript/script.js"></script>
+</head>
+<body id="background">
+
+    <header class="site-headers" id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-md-6">
+                    <button id="title" onclick="index()"><h2 id="web-name"><span data-translate="website">DRUŠTVENE IGRE</span><img class="header-images" src="images/2-Dice-Icon.svg"></h2></button>
+                </div>
+                <div id="right-col" class="col-6 col-md-6">
+                    <a href="account.html"><img class="header-images" src="images/shopping-cart-white-icon.webp"></a>
+                    <button class="language" translate="no" onclick="changeLanguage('srb')">SRB</button>
+                    <button class="language" translate="no" onclick="changeLanguage('eng')">ENG</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul id="navigation">
+            <li class="section"><button id="nav1" class="select-page" onclick="index()"><h6 data-translate="home">Početna</h6></button></li>
+            <li class="section dropdown">
+                <button id="nav2" class="select-page dropbtn"><h6 data-translate="gallery">Galerija</h6></button>
+                <div class="dropdown-content">
+                    <a href="gallery.html?section=store" data-translate="store">Prodavnica</a>
+                    <a href="gallery.html?section=games" data-translate="games">Igre</a>
+                    <a href="gallery.html?section=tournaments" data-translate="tournaments">Turnire</a>
+                </div>
+            </li>
+            <li class="section dropdown">
+                <button id="nav3" class="select-page dropbtn"><h6 data-translate="catalog">Katalog Igara</h6></button>
+                <div class="dropdown-content">
+                    <a href="catalog.html?section=family" data-translate="family">Porodične</a>
+                    <a href="catalog.html?section=strategy" data-translate="strategy">Strateške</a>
+                    <a href="catalog.html?section=party" data-translate="party">Zabavne</a>
+                </div>
+            </li>
+            <li class="section"><button id="nav4" class="select-page" onclick="account()"><h6 data-translate="account">Moj Nalog</h6></button></li>
+            <li class="section"><button id="nav5" class="select-page" onclick="about()"><h6 data-translate="about">O Nama</h6></button></li>
+        </ul>
+    </nav>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li aria-current="page" data-translate="home">Početna</li>
+        </ol>
+    </nav>
+    <hr class="break">
+
+    <br>
+    <br>
+    <main>
+        <div id="welcome" class="container-fluid">
+            <h1 data-translate="welcome">♔&nbsp;Dobrodošli na stranici Društvene Igre!&nbsp;♕</h1>
+            <br>
+            <div class="row">
+                <div class="col-6 ps-3">
+                    <h5 data-translate="welcomeText">Zabava za sve generacije! Otkrijte veliki izbor igara za porodicu, strategiju i žurku, sve na jednom mestu.</h5>
+                </div>
+                <div class="col-6">
+                    <button id="search-games" onclick="catalog()"><h3 id="btn-text" data-translate="welcomeButton">Pretraga Igara</h3></button>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <br>
+
+        <div class="container-fluid">
+            <div class="row ms-5 me-5">
+                <div class="col-md-4 p-3">
+                    <div class="info rounded p-4 h-100">
+                        <h2 data-translate="sales">Akcije</h2>
+                        <ul>
+                            <li data-translate="salesText">Sve strateške igre imaju popust od 20%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-3">
+                    <div class="info rounded p-4 h-100">
+                        <h2 data-translate="tournaments">Turnire</h2>
+                        <ul>
+                            <li data-translate="catanTournament">Katan Turnir - 25.07.2026.</li>
+                            <li data-translate="chessTournament">Šah Turnir - 31.07.2026. - 02.08.2026.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-3">
+                    <div class="info rounded p-4 h-100">
+                        <h2 data-translate="new">Novo u Prodaji</h2>
+                        <ul>
+                            <li>Guess Who - 1.600 RSD</li>
+                            <li>Splendor - 4.000 RSD</li>
+                            <li>Telestrations - 5.400 RSD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="container-fluid">
+            <div class="row ms-5 me-5">
+                <h1 data-translate="topGames">Najbolje Ocenjene Igre</h1>
+            </div>
+            <br>
+            <div id="top-rated-games" class="row ms-5 me-5"></div>
+        </div>
+        <br>
+        <br>
+
+        <div class="container-fluid">
+            <div class="row ms-5 me-5">
+                <h1 data-translate="visit">Preporučuje se poseta:</h1>
+            </div>
+            <br>
+            <div class="row ms-5 me-5">
+                <div class="col-md-6 col-12 mb-3 text-center">
+                    <button class="banners" onclick="banner1()">BoardGameGeek</button>
+                </div>
+                <div class="col-md-6 col-12 mb-3 text-center">
+                    <button class="banners" onclick="banner2()">Games4You</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </main>
+    <br>
+
+    <footer class="site-headers" id="footer">
+        <h6 data-translate="footer">Copyright 2026, Mile Maćešić, Odsek za Softversko Inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu</h6>
+    </footer>
+    
+</body>
+</html>
